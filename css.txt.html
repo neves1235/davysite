@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 ACESSO VIP | CONTEÚDO EXCLUSIVO</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .telegram-btn {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+        .telegram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,136,204,0.3);
+        }
+        .telegram-btn:active {
+            transform: scale(0.98);
+        }
+        .countdown {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 25px 0;
+            border: 2px dashed #dee2e6;
+        }
+        .countdown-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0088cc;
+        }
+        .countdown-text {
+            color: #6c757d;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #856404;
+        }
+        .warning ul {
+            list-style: none;
+            padding: 0;
+        }
+        .warning li {
+            margin: 5px 0;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0088cc;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .stat {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 12px;
+        }
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .stat-label {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .lang-badge {
+            display: inline-block;
+            background: #e8f4f8;
+            color: #0088cc;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🔐</div>
+        <span class="badge">🔥 CONTEÚDO VIP</span>
+        <h1>Conteúdo das Novinhas</h1>
+        <p class="subtitle">Acesso exclusivo ao canal VIP do Telegram. Conteúdos diários e atualizados!</p>
+        
+        <div class="lang-badge">🇧🇷 PORTUGUÊS (BRASIL)</div>
+        
+        <div class="countdown">
+            <div class="countdown-number" id="timer">10</div>
+            <div class="countdown-text">segundos para o redirecionamento</div>
+        </div>
+        
+        <div class="loader" id="loader" style="display: none;"></div>
+        
+        <a href="https://t.me/@tropada241kkjbot" class="telegram-btn" id="telegramLink">
+            📲 ABRIR CANAL VIP
+        </a>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="membros">2.5k</div>
+                <div class="stat-label">MEMBROS</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="online">128</div>
+                <div class="stat-label">ONLINE</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="videos">350+</div>
+                <div class="stat-label">CONTEÚDOS</div>
+            </div>
+        </div>
+        
+        <div class="warning">
+            ⚠️ <strong>Importante:</strong>
+            <ul>
+                <li>✅ Clique no botão ou aguarde</li>
+                <li>✅ Telegram instalado obrigatório</li>
+                <li>✅ Acesso pessoal e rastreado</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            🔒 Ambiente seguro e anônimo • Canal exclusivo
+        </div>
+    </div>
+
+    <script>
+        // Tempo de redirecionamento (10 segundos)
+        let seconds = 10;
+        const timer = document.getElementById('timer');
+        const telegramLink = document.getElementById('telegramLink');
+        const loader = document.getElementById('loader');
+        
+        // Atualiza o contador
+        const countdown = setInterval(() => {
+            seconds--;
+            timer.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                loader.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = telegramLink.href;
+                }, 500);
+            }
+        }, 1000);
+        
+        // Adiciona evento de clique no botão
+        telegramLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Mostra loading
+            loader.style.display = 'block';
+            timer.textContent = '0';
+            // Para o contador
+            clearInterval(countdown);
+            // Redireciona após 1 segundo
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 1000);
+        });
+        
+        // Estatísticas dinâmicas
+        function updateStats() {
+            const membros = Math.floor(1800 + Math.random() * 700);
+            const online = Math.floor(80 + Math.random() * 150);
+            const videos = Math.floor(300 + Math.random() * 200);
+            
+            document.getElementById('membros').textContent = 
+                membros.toLocaleString() + (membros > 999 ? 'k' : '');
+            document.getElementById('online').textContent = online;
+            document.getElementById('videos').textContent = '+' + videos;
+        }
+        
+        // Atualiza stats a cada 5 segundos
+        updateStats();
+        setInterval(updateStats, 5000);
+        
+        // Detecta se é mobile
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Ajuste para mobile
+        }
+        
+        // Previne problemas ao voltar da página
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                seconds = 10;
+                timer.textContent = seconds;
+                loader.style.display = 'none';
+                location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
